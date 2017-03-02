@@ -407,12 +407,28 @@
 													</form>
 
 												<!-- Image -->
+												
 													<h3>Image</h3>
+												<script type='text/javascript'>
+//<![CDATA[
+  var nW,nH,oH,oW;
+  function zoomToggle(iWideSmall,iHighSmall,iWideLarge,iHighLarge,whichImage){
+    oW=whichImage.style.width;oH=whichImage.style.height;
+    if((oW==iWideLarge)||(oH==iHighLarge)){
+      nW=iWideSmall;nH=iHighSmall;
+    }else{
+      nW=iWideLarge;nH=iHighLarge;
+    }
+    whichImage.style.width=nW;whichImage.style.height=nH;
+  }
+//]]>
+</script>
 
 													<h4>Fit</h4>
 													<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
 													<div class="box alt">
 														<div class="row 50% uniform">
+															<img src="images/pic08.jpg" width="ancho1" height="alto1" onclick="zoomToggle('ancho1px','alto1px','ancho2px','alto2px',this);">
 															<div class="4u"><span class="image fit"><img src="images/pic08.jpg" alt="" /></span></div>
 															<div class="4u"><span class="image fit"><img src="images/pic09.jpg" alt="" /></span></div>
 															<div class="4u$"><span class="image fit"><img src="images/pic10.jpg" alt="" /></span></div>
